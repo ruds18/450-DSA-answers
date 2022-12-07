@@ -10,7 +10,7 @@ void bfs(int node , vector<bool>&visited, vector<int>&ans,unordered_map<int, set
     while(!q.empty()){
         int front  = q.front();
         q.pop();
-        
+
         ans.push_back(front);
 
         for(auto i: adjList[front]){
@@ -33,6 +33,8 @@ vector<int> BFS(int vertex, vector<pair<int, int>> edges)
         // Undirected graph
         adjList[u].insert(v);
         adjList[v].insert(u);
+        // for Directed
+        // adjList[u].insert(v);
     }
     vector<bool>visited(vertex);
     vector<int> ans;
